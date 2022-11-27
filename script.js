@@ -75,18 +75,20 @@ menu.addEventListener('click', function click() {
 
 
 button1.addEventListener('click', async function click() {
-    if (candy11code != 1) {
+    if (candy11code == 0 || document.querySelector('#inp1').value == 'candy11') {
         if (document.querySelector('#inp1').value == 'candy11') {
             document.querySelector('#inp1').value = '';
             candy11code = 1;
             score += 1000;
             moneye();
             document.querySelector('#monologue').innerHTML = 'Checking code completed successfully!';
-            await sleep(5000)
+            await sleep(5000);
             document.querySelector('#monologue').innerHTML = 'Enter gift code';
+        } else {
+            document.querySelector('#monologue').innerHTML = 'Code not found';
         }
     } else {
-        document.querySelector('#monologue').innerHTML = 'This code is used already!'
+        document.querySelector('#monologue').innerHTML = 'This code is used already!';
     }
 })
 

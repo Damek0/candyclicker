@@ -6,6 +6,7 @@
 }
 
 main {display: flex;}
+body {background-color: rgb(176, 91, 255);}
 
 .candyv {
     width: 200px;
