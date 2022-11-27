@@ -1,6 +1,6 @@
+let score = 5000000;
 let candy = document.querySelector('#candy');
 let money = document.querySelector('#score');
-let score = 5000000;
 moneye();
 let lvl2work = 0;
 let lvl3work = 0;
@@ -28,6 +28,7 @@ let lvl12bwork = 0;
 
 let additionscore = 1;
 let candy11code = 0;
+let namebpre = 0
 
 let points = 1200
 const level1 = document.querySelector('#auto20rotate1');
@@ -62,6 +63,27 @@ let button1 = document.querySelector('#button1s');
 let cos = 0;
 let menu = document.querySelector('#hamburger-menu');
 let iks = document.querySelector('#iks');
+let iks2 = document.querySelector('#close2');
+let settings = document.querySelector('#settings');
+let button2 = document.querySelector('#button2s');
+let nameb = document.querySelector('#name-b')
+
+
+button2s.addEventListener('click', function click() {
+    namebpre = document.querySelector('#inp2').value;
+    nameb = document.querySelector('#name-b').innerHTML = namebpre + "'s " + 'confectionery'
+})
+
+settings.addEventListener('click', function click() {
+    document.querySelector('.communicat1').classList.remove('communicat1-event');
+    document.querySelector('.communicat2').classList.add('communicat2-event');
+    document.querySelector('#candy').classList.add('block-event');
+})
+
+iks2.addEventListener('click', function click() {
+    document.querySelector('.communicat2').classList.remove('communicat2-event');
+    document.querySelector('#candy').classList.remove('block-event');
+})
 
 iks.addEventListener('click', function click() {
     document.querySelector('#management').classList.add('manage');
@@ -75,7 +97,7 @@ menu.addEventListener('click', function click() {
 
 
 button1.addEventListener('click', async function click() {
-    if (candy11code == 0 || document.querySelector('#inp1').value == 'candy11') {
+    if (candy11code != 1 && document.querySelector('#inp1').value == 'candy11') {
         if (document.querySelector('#inp1').value == 'candy11') {
             document.querySelector('#inp1').value = '';
             candy11code = 1;
@@ -89,6 +111,9 @@ button1.addEventListener('click', async function click() {
         }
     } else {
         document.querySelector('#monologue').innerHTML = 'This code is used already!';
+    }
+    if (document.querySelector('#inp1').value != 'candy11') {
+        document.querySelector('#monologue').innerHTML = 'Code not found';
     }
 })
 
@@ -105,6 +130,7 @@ async function rotate(points) {
 }
 
 key.addEventListener('click', function click() {
+    document.querySelector('.communicat2').classList.remove('communicat2-event');
     document.querySelector('.communicat1').classList.add('communicat1-event');
     document.querySelector('#candy').classList.add('block-event');
 })
