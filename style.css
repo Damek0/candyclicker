@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+main {display: flex;}
+
+.candyv {
+    width: 200px;
+    height: 200px;
+}
+
+.candyv:hover {
+    cursor: pointer;
+}
+
+.do {
+    background-color: rgb(176, 91, 255);
+    width: 70%;
+    height: 690px;
+    float: left;
+}
+
+#management {
+    background-color: blueviolet;
+    float: right;
+    box-shadow: 1px 1px 10px 1px black;
+}
+
+.bar {
+    background-color: rgb(111, 47, 171);
+    width: 372px;
+    padding: 5px;
+}
+
+.bar-icon {
+    transition: 0.3s;
+}
+
+.bar-icon:hover {
+    transition: 0.3s;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.objects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.candyv-event {
+    animation-name: candy;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.auto20rotate {
+    width: 100px;
+    height: 100px;
+}
+
+.upgrade {
+    background-color: rgb(212, 166, 255);
+    width: 330px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.elements20x {
+    display: flex;
+}
+
+.levels {
+    display: flex;
+    background-color: rgb(101, 53, 145);
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.text-in-upgrade {
+    margin: 20px;
+}
+
+.level1 {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.level1:hover {
+    cursor: pointer;
+}
+
+.level1-event {
+    background-color: chartreuse;
+}
+
+.candyv-event2 {
+    animation-name: rotatelvl1;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.communicats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.communicat1 {
+    position: absolute;
+    background-color: rgb(145, 118, 181);
+    padding: 20px;
+    width: 600px;
+    height: 300px;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px black;
+}
+
+.closes {
+    float: right;
+}
+
+.closes:hover {
+    cursor: pointer;
+}
+
+.main-elements {
+    margin-top: 75px;
+    margin-left: 15px;
+}
+
+.input1 {
+    background-color: rgb(198, 198, 198);
+    outline: none;
+    border: 0;
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.button1 {
+    background-color: chartreuse;
+    border: 0;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 50px;
+    width: 75px;
+    transition: background-color 0.3s;
+}
+
+.button1:hover {
+    cursor: pointer;
+    background-color: rgb(107, 180, 34);
+    transition: background-color 0.3s;
+}
+
+.communicat1-event {
+    display: block;
+}
+
+.block-event {
+    display: none;
+}
+
+.thisplace {
+    display: flex;
+}
+
+.main-event {
+    opacity: 0.2;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    float: right;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+#score {
+    margin: 10px;
+}
+
+.management-event {
+    display: block;
+}
+
+.iks {
+    float: right;
+}
+
+.iks:hover {
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+}
+
+.iks {
+    display: none;
+}
+
+.level2 {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.level2:hover {
+    cursor: pointer;
+}
+
+.level2-event {
+    background-color: chartreuse;
+}
+
+.manage {
+    overflow: scroll;
+}
+
+#management {
+    height: 690px;
+}
+
+#upgrades-text {
+    margin: 10px;
+    color: white;
+}
+
+@keyframes candy {
+    from {
+        width: 200px;
+        height: 200px;
+    }
+    to {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@keyframes rotatelvl1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@media only screen and (max-width:800px) {
+    .manage {
+        display: none;
+    }
+
+    #management {
+        position: absolute;
+        height: 600px;
+        float: right;
+        overflow: scroll;
+        margin: 0 auto 0 auto;
+    }
+
+    .do {
+        width: 100%;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .iks {
+        display: block;
+    }
+    .communicat1 {
+        width: 300px;
+    }
+    .input1 {
+        width: 200px;
+    }
+  
+
+
+}
