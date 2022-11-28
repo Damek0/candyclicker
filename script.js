@@ -1,4 +1,4 @@
-let score = 5000000;
+let score = 0;
 let candy = document.querySelector('#candy');
 let money = document.querySelector('#score');
 moneye();
@@ -26,9 +26,18 @@ let lvl10bwork = 0;
 let lvl11bwork = 0;
 let lvl12bwork = 0;
 
+let purchased1 = 0
+let purchased2 = 0
+let purchased3 = 0
+let purchased4 = 0
+
 let additionscore = 1;
 let candy11code = 0;
 let namebpre = 0
+
+let volumecandy = 1
+let volumecode = 1
+let volumebuy = 1
 
 let points = 1200
 const level1 = document.querySelector('#auto20rotate1');
@@ -60,13 +69,103 @@ const level12b = document.querySelector('#per20secound12');
 let close = document.querySelector('#close');
 let key = document.querySelector('#key');
 let button1 = document.querySelector('#button1s');
-let cos = 0;
 let menu = document.querySelector('#hamburger-menu');
 let iks = document.querySelector('#iks');
 let iks2 = document.querySelector('#close2');
 let settings = document.querySelector('#settings');
 let button2 = document.querySelector('#button2s');
 let nameb = document.querySelector('#name-b')
+let buttonb1 = document.querySelector('#button-b1');
+let buttonb2 = document.querySelector('#button-b2');
+let buttonb3 = document.querySelector('#button-b3');
+let buttonb4 = document.querySelector('#button-b4');
+let close3 = document.querySelector('#close3');
+let shop = document.querySelector('#shop');
+let slider1 = document.querySelector('#slider');
+let slider2 = document.querySelector('#slider2');
+let slider3 = document.querySelector('#slider3');
+
+slider3.addEventListener('change', function click() {
+    volumebuy = document.querySelector('#slider3').value / 100
+})
+
+slider2.addEventListener('change', function click() {
+    volumecode = document.querySelector('#slider2').value / 100
+})
+
+slider1.addEventListener('change', function click() {
+    volumecandy = document.querySelector('#slider').value / 100
+})
+
+shop.addEventListener('click', function click() {
+    document.querySelector('.communicat3').classList.add('display-block-all-event');
+    document.querySelector('#candy').classList.add('display-none-all-event');
+    document.querySelector('.communicat1').classList.remove('communicat1-event');
+    document.querySelector('.communicat2').classList.remove('communicat2-event');
+})
+
+close3.addEventListener('click', function click() {
+    document.querySelector('.communicat3').classList.remove('display-block-all-event');
+    document.querySelector('#candy').classList.remove('display-none-all-event');
+    document.querySelector('#candy').classList.add('display-block-all-event');
+})
+
+
+buttonb1.addEventListener('click', function click() {
+    if (score >= 7000) {
+        if (purchased1 == 0) {
+            score -= 7000;
+            play("sounds/buy.wav", volumebuy);
+        }
+        document.querySelector('#candy').src = 'img/skin-red-pc.png';
+        moneye();
+        purchased1 = 1;
+} else {    
+        alert("You haven't so much money!");
+    }
+})
+
+buttonb2.addEventListener('click', function click() {
+    if (score >= 7000) {
+        if (purchased2 == 0) {
+            score -= 7000;
+            play("sounds/buy.wav", volumebuy);
+        }
+        document.querySelector('#candy').src = 'img/skin-yellow-pc.png';
+        moneye();
+        purchased2 = 1;
+    } else {
+        alert("You haven't so much money!");
+    }
+})
+
+buttonb3.addEventListener('click', function click() {
+    if (score >= 7000) {
+        if (purchased3 == 0) {
+            score -= 7000;
+            play("sounds/buy.wav", volumebuy);
+        }
+        document.querySelector('#candy').src = 'img/skin-green-pc.png';
+        moneye();
+        purchased3 = 1;
+    } else {
+        alert("You haven't so much money!");
+    }
+})
+
+buttonb4.addEventListener('click', function click() {
+    if (score >= 7000) {
+        if (purchased4 == 0) {
+            score -= 7000;
+            play("sounds/buy.wav", volumebuy);
+        }
+        document.querySelector('#candy').src = 'img/skin-violet-pc.png';
+        moneye();
+        purchased4 = 1;
+    } else {
+        alert("You haven't so much money!");
+    }
+})
 
 
 button2s.addEventListener('click', function click() {
@@ -77,12 +176,14 @@ button2s.addEventListener('click', function click() {
 settings.addEventListener('click', function click() {
     document.querySelector('.communicat1').classList.remove('communicat1-event');
     document.querySelector('.communicat2').classList.add('communicat2-event');
-    document.querySelector('#candy').classList.add('block-event');
+    document.querySelector('#candy').classList.add('display-none-all-event');
+    document.querySelector('.communicat3').classList.remove('display-block-all-event');
 })
 
 iks2.addEventListener('click', function click() {
     document.querySelector('.communicat2').classList.remove('communicat2-event');
     document.querySelector('#candy').classList.remove('block-event');
+    document.querySelector('#candy').classList.remove('display-none-all-event');
 })
 
 iks.addEventListener('click', function click() {
@@ -99,6 +200,7 @@ menu.addEventListener('click', function click() {
 button1.addEventListener('click', async function click() {
     if (candy11code != 1 && document.querySelector('#inp1').value == 'candy11') {
         if (document.querySelector('#inp1').value == 'candy11') {
+            play("sounds/powerup.wav", volumecode)
             document.querySelector('#inp1').value = '';
             candy11code = 1;
             score += 1000;
@@ -133,6 +235,8 @@ key.addEventListener('click', function click() {
     document.querySelector('.communicat2').classList.remove('communicat2-event');
     document.querySelector('.communicat1').classList.add('communicat1-event');
     document.querySelector('#candy').classList.add('block-event');
+    document.querySelector('#candy').classList.add('display-none-all-event');
+    document.querySelector('.communicat3').classList.remove('display-block-all-event');
 })
 
 close.addEventListener('click', function click() {
@@ -141,13 +245,11 @@ close.addEventListener('click', function click() {
     document.querySelector('main').classList.remove('main-event');
     document.querySelector('#monologue').innerHTML = 'Enter gift code';
     document.querySelector('#inp1').value = '';
+    document.querySelector('#candy').classList.remove('display-none-all-event');
 })
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 candy.addEventListener('click', async function click() {
+    play("sounds/pop.wav", volumecandy);
     score += additionscore;
     moneye()
     document.querySelector('#candy').classList.add('candyv-event');
@@ -156,7 +258,17 @@ candy.addEventListener('click', async function click() {
     document.querySelector('#candy').classList.remove('candyv-event');
 })
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
+function play(soundname, volume) {
+    let audio = new Audio(soundname);
+    audio.volume = volume
+    audio.play();
+}
+
+// upgrades 2
 
 level1b.addEventListener('click', function click() {
     if (score >= 5000) {
@@ -347,28 +459,7 @@ level12b.addEventListener('click', function click() {
     }
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// upgrades 1
 
 level1.addEventListener('click', function click() {
     if (score >= 1000) {
