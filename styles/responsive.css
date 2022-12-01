@@ -1,0 +1,83 @@
+@media only screen and (max-width:800px) {
+    .manage {
+        display: none;
+    }
+
+    #management {
+        position: absolute;
+        height: 600px;
+        float: right;
+        overflow: scroll;
+        margin: 0 auto 0 auto;
+    }
+
+    .do {
+        width: 100%;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .iks {
+        display: block;
+    }
+    .communicat1 {
+        width: 300px;
+    }
+
+    .input1 {
+        width: 200px;
+    }
+
+    .communicat2 {
+        width: 300px;
+    }
+
+    .input2 {
+        width: 200px;
+    }
+
+    #slider {
+        width: 150px;
+    }
+
+    .communicat3 {
+        width: 300px;
+    }
+
+    .button-buy1 {
+        width: 53px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .default-c {
+        width: 50px;
+        height: 50px;
+    }
+
+    .default-candy {
+        margin-left: 13px;
+    }
+
+    #sliderx {
+        width: 150px;
+    }
+
+    .communicat4 {
+        width: 300px;
+    }
+
+    .ele {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+
+    #management {
+        overflow-x: hidden;
+        float: right;
+    }
+}

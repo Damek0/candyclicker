@@ -1,0 +1,28 @@
+@keyframes candy {
+    from {
+        width: 200px;
+        height: 200px;
+    }
+    to {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@keyframes rotatelvl1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes main {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
