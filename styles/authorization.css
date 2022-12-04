@@ -1,0 +1,43 @@
+main {
+    display: none;
+}
+
+.preauthorization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authorization {
+    margin-top: 10%;
+    background-color: rgb(205, 156, 243);
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px 1px black;
+}
+
+.enter1 {
+    margin: 20px;
+}
+
+.enter2 {
+    margin: 20px;
+}
+
+.buttonsx {
+    background-color: chartreuse;
+    float: right;
+    padding: 20px;
+    margin: 20px;
+    border: 0;
+    transition: background-color 0.3s;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.buttonsx:hover {
+    background-color: rgb(192, 255, 130);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}

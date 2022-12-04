@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/authorization.css">
     <link rel="shortcut icon" href="img/candy.png">
     <meta http-equiv="Imagetoolbar" content="no">
-    <title>CandyAPP</title>
+    <title>CandyClicker</title>
 </head>
 <body>
     <div class="communicats">
@@ -38,6 +39,16 @@
                     <input class="sliderx" id="slider2" type="range" value="100">
                     <h3 class="descriptions">buying skins</h3>
                     <input class="sliderx" id="slider3" type="range" value="100">
+                    <h3 class="descriptions">rotate on click</h3>
+                    <div class="onxof">
+                        <button id="txon" class="onorof">true</button>
+                        <button id="txoff" class="onorof">false</button>
+                    </div>
+                    <h3 class="descriptions">animation on click</h3>
+                    <div class="onxof">
+                        <button id="txon2" class="onorof">true</button>
+                        <button id="txoff2" class="onorof">false</button>
+                    </div>
                 </div>
                 <div id="meos" class="main-elements">
                     <h2>Other</h2>
@@ -87,8 +98,35 @@
                 </div>
             </div>
         </div>
+        <div class="communicat5">
+            <div class="barx">
+                <img id="close5" class="closes" src="img/close.png" alt="close">
+            </div>
+            <div class="content-c5">
+                <div class="elements-c5">
+                    <div class="personal-data">
+                        <img class="person" src="img/admin-logo.jpg">
+                    </div>
+                    <div class="elements-admin1">
+                        <h4>Enter the admin password</h4>
+                        <input class="inp-a0" type="text" id="inp-admin1">
+                        <p id="warning1" class="warnings">You must fill this field</p>
+                    </div>
+                    <div class="elements-admin2">
+                        <h4>Enter the password admin</h4>
+                        <input class="inp-a0" type="password" id="inp-admin2">
+                        <p id="warning2" class="warnings">You must fill this field</p>
+                    </div>
+                    <button id="buttonx3v" type="button" class="buttonx3">GO</button>
+                </div>
+            </div>
+        </div>
     </div>
     <main>
+        <div class="debug-tools">
+            <img id="recycler" class="tool-icon" src="img/recycler.png">
+            <img id="add" class="tool-icon" src="img/add.png">
+        </div>
         <div class="do">
             <img id="hamburger-menu" class="menu" src="img/menu.png" alt="hamburger menu">
             <div class="stats"><h2 id="score" class="text-center">Money: 0</h2></div>
@@ -99,10 +137,11 @@
         </div>
         <div id="management" class="manage">
             <div class="bar">
-                <img id="settings" class="bar-icon" src="img/settings.png" alt="settings">
-                <img id="key" class="bar-icon" src="img/key.png" alt="settings">
+                <img id="key" class="bar-icon" src="img/settings.png" alt="settings">
+                <img id="settings" class="bar-icon" src="img/key.png" alt="settings">
                 <img id="shop" class="bar-icon" src="img/shop.png" alt="settings">
                 <img id="account" class="bar-icon" src="img/account.png" alt="settings">
+                <img id="admin" class="bar-icon" src="img/admin.png" alt="settings">
                 <img id="iks" class="iks" src="img/close.png" alt="iks close">
             </div>
             <div class="upgrades">
@@ -150,6 +189,22 @@
             </div>
         </div>
     </main>
+    <div class="preauthorization">
+        <div class="authorization">
+            <h3>Do you have authorization for view this project?</h3>
+            <form>
+                <div class="enter1">
+                    <h4>Enter your id</h4>
+                    <input id="id200" class="inp-a0" type="text">
+                </div>
+                <div class="enter2">
+                    <h4>Enter your password</h4>
+                    <input id="password200" class="inp-a0" type="password">
+                </div>
+                <button id="authorization-b" type="button" class="buttonsx">GO</button>
+            </form>
+        </div>
+    </div>
 </body>
 <script src="scripts/script.js"></script>
 <script src="scripts/security.js"></script>
