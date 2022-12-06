@@ -59,21 +59,6 @@ let warning2 = document.querySelector('#warning2');
 let buttonx3 = document.querySelector('#buttonx3v');
 let close5 = document.querySelector('#close5');
 let recycler = document.querySelector('#recycler');
-let button1xi = document.querySelector('#button1xi');
-let aub = document.querySelector('#authorization-b');
-
-aub.addEventListener('click', function click() {
-    if (document.querySelector('#id200').value == '010011' && document.querySelector('#password200').value == 'candytk') {
-        document.querySelector('main').style.display = 'flex'
-        document.querySelector('.preauthorization').style.display = 'none'
-    } else {
-        alert('Data in the fields are invalid')
-    }
-})
-
-button1xi.addEventListener('click', function click() {
-
-})
 
 recycler.addEventListener('click', function click() {
     score = 0;
